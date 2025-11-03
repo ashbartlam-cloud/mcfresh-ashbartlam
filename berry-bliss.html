@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berry Bliss - McFresh</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="berry-page">
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="images/mcfresh-logo.png" alt="McFresh" class="nav-logo" />
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#" class="dropdown-trigger">Discover ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Tropical Passion <span class="new-badge">NEW</span></a></li>
+            <li><a href="citrus-burst.html">Citrus Burst</a></li>
+            <li><a href="berry-bliss.html">Berry Bliss</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#features">About</a></li>
+        <li><a href="index.html#footer">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="openOrderModal()">Order Now</button>
+    </div>
+  </nav>
+  
+  <section class="flavor-hero" style="background: linear-gradient(180deg, #0a1a2e 0%, #1b2d4e 50%, #4a90e2 100%);">
+    <div class="flavor-hero-content">
+      <h1 class="flavor-title">Berry Bliss</h1>
+      <p class="flavor-subtitle">winter in a can</p>
+      <p class="flavor-description">We took berries that grow in places where it actually gets cold, added some blue raspberry because why not, and made it taste like drinking winter. Frosty, sharp, and surprisingly good.</p>
+    </div>
+  </section>
+  
+  <section class="product-showcase">
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="product-video">
+            <source src="images/BA2/video-bb.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="product-info">
+          <div class="product-header">
+            <img src="images/mcfresh-logo.png" alt="McFresh" class="product-logo" />
+            <div>
+              <h2 class="product-name">Berry Bliss</h2>
+              <p class="product-subtitle">Bottle</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <span class="price">$19.99</span>
+            <span class="price-details">Case of 10 bottles</span>
+          </div>
+          <details class="ingredients-dropdown">
+            <summary>Ingredients ▼</summary>
+            <ul class="ingredients-list">
+              <li>Mixed Berry Puree (85ml)</li>
+              <li>Sparkling Water (590ml)</li>
+              <li>Lemon Juice (10ml)</li>
+              <li>Natural Flavors</li>
+              <li>Vitamin C</li>
+            </ul>
+          </details>
+          <button class="buy-now-btn" onclick="handlePurchase(this)">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="product-video">
+            <source src="images/BA2/canvideo-bb.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="product-info">
+          <div class="product-header">
+            <img src="images/mcfresh-logo.png" alt="McFresh" class="product-logo" />
+            <div>
+              <h2 class="product-name">Berry Bliss</h2>
+              <p class="product-subtitle">Can</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <span class="price">$9.99</span>
+            <span class="price-details">Pack of 6 × 330ml cans</span>
+          </div>
+          <details class="ingredients-dropdown">
+            <summary>Ingredients ▼</summary>
+            <ul class="ingredients-list">
+              <li>Mixed Berry Puree (40ml)</li>
+              <li>Sparkling Water (285ml)</li>
+              <li>Lemon Juice (5ml)</li>
+              <li>Natural Flavors</li>
+              <li>Vitamin C</li>
+            </ul>
+          </details>
+          <button class="buy-now-btn" onclick="handlePurchase(this)">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <img src="images/mcfresh-logo.png" alt="McFresh" class="footer-logo" />
+        <p class="footer-tagline">We make Drinks! Good ones.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@mcfresh.com">contact@mcfresh.co.nz</a></li>
+          <li><a href="tel:+1234567890">0800 666 2341</a></li>
+          <li>In your Fridge soon!</li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul class="footer-links">
+          <li><a href="#" target="_blank">Instagram</a></li>
+          <li><a href="#" target="_blank">Facebook</a></li>
+          <li><a href="#" target="_blank">Twitter</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Shipping Info</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 McFresh. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

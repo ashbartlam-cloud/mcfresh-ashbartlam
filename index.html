@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>McFresh</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="index-page">
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="images/mcfresh-logo.png" alt="McFresh" class="nav-logo" />
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#" class="dropdown-trigger">Discover ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Tropical Passion <span class="new-badge">NEW</span></a></li>
+            <li><a href="citrus-burst.html">Citrus Burst</a></li>
+            <li><a href="berry-bliss.html">Berry Bliss</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="openOrderModal()">Order Now</button>
+    </div>
+  </nav>
+  
+  <section class="scroll-anim">
+    <div class="canvas-container">
+      <video id="intro-video" playsinline muted>
+        <source src="images/BA1/intro-animation.mp4" type="video/mp4">
+      </video>
+    </div>
+    <img src="images/mcfresh-logo.png" alt="McFresh Logo" class="scroll-logo" />
+  </section>
+  
+  <section class="luxury-banner">
+    <div class="luxury-content">
+      <h2 class="luxury-title">Tropical Passion</h2>
+      <p class="luxury-subtitle">fresh off the press</p>
+      <p class="luxury-description">We took real passionfruit, the kind that makes your face do that thing, and bottled it. No weird stuff.</p>
+    </div>
+  </section>
+  
+  <section class="product-showcase" id="products">
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="product-video">
+            <source src="images/BA2/video.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="product-info">
+          <div class="product-header">
+            <img src="images/mcfresh-logo.png" alt="McFresh" class="product-logo" />
+            <div>
+              <h2 class="product-name">Tropical Passion</h2>
+              <p class="product-subtitle">Bottle</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <span class="price">$19.99</span>
+            <span class="price-details">Pack of 6 x 700ml</span>
+          </div>
+          <details class="ingredients-dropdown">
+            <summary>Ingredients ▼</summary>
+            <ul class="ingredients-list">
+              <li>Passionfruit Puree (85ml)</li>
+              <li>Sparkling Water (590ml)</li>
+              <li>Lemon Juice (10ml)</li>
+              <li>Natural Flavors</li>
+              <li>Vitamin C</li>
+            </ul>
+          </details>
+          <button class="buy-now-btn" onclick="handlePurchase(this)">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="product-video">
+            <source src="images/BA2/canvideo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="product-info">
+          <div class="product-header">
+            <img src="images/mcfresh-logo.png" alt="McFresh" class="product-logo" />
+            <div>
+              <h2 class="product-name">Tropical Passion</h2>
+              <p class="product-subtitle">Can</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <span class="price">$9.99</span>
+            <span class="price-details">Pack of 6 × 330ml cans</span>
+          </div>
+          <details class="ingredients-dropdown">
+            <summary>Ingredients ▼</summary>
+            <ul class="ingredients-list">
+              <li>Passionfruit Puree (40ml)</li>
+              <li>Sparkling Water (285ml)</li>
+              <li>Lemon Juice (5ml)</li>
+              <li>Natural Flavors</li>
+              <li>Vitamin C</li>
+            </ul>
+          </details>
+          <button class="buy-now-btn" onclick="handlePurchase(this)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Order Modal -->
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeOrderModal()">&times;</span>
+      <h2 class="modal-title">Pick Your Poison</h2>
+      <p class="modal-subtitle">seriously, they're all good</p>
+      
+      <div class="modal-products">
+        <div class="modal-product-card" data-flavor="tropical">
+          <div class="modal-video-wrapper">
+            <video autoplay loop muted playsinline class="modal-video">
+              <source src="images/BA2/video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Tropical Passion</h3>
+          <p class="modal-product-type">Bottle - $19.99</p>
+          <button class="modal-add-btn" onclick="addToCartFromModal('Tropical Passion', 'Bottle', 49.99, this)">Add to Cart</button>
+        </div>
+        
+        <div class="modal-product-card" data-flavor="tropical-can">
+          <div class="modal-video-wrapper">
+            <video autoplay loop muted playsinline class="modal-video">
+              <source src="images/BA3/can-video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Tropical Passion</h3>
+          <p class="modal-product-type">Can - $9.99</p>
+          <button class="modal-add-btn" onclick="addToCartFromModal('Tropical Passion', 'Can', 29.99, this)">Add to Cart</button>
+        </div>
+        
+        <div class="modal-product-card" data-flavor="citrus">
+          <div class="modal-video-wrapper">
+            <video autoplay loop muted playsinline class="modal-video">
+              <source src="images/citrus/bottle-video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Citrus Burst</h3>
+          <p class="modal-product-type">Bottle - $19.99</p>
+          <button class="modal-add-btn" onclick="addToCartFromModal('Citrus Burst', 'Bottle', 49.99, this)">Add to Cart</button>
+        </div>
+        
+        <div class="modal-product-card" data-flavor="citrus-can">
+          <div class="modal-video-wrapper">
+            <video autoplay loop muted playsinline class="modal-video">
+              <source src="images/citrus/can-video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Citrus Burst</h3>
+          <p class="modal-product-type">Can - $9.99</p>
+          <button class="modal-add-btn" onclick="addToCartFromModal('Citrus Burst', 'Can', 29.99, this)">Add to Cart</button>
+        </div>
+        
+        <div class="modal-product-card" data-flavor="berry">
+          <div class="modal-video-wrapper">
+            <video autoplay loop muted playsinline class="modal-video">
+              <source src="images/berry/bottle-video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Berry Bliss</h3>
+          <p class="modal-product-type">Bottle - $19.99</p>
+          <button class="modal-add-btn" onclick="addToCartFromModal('Berry Bliss', 'Bottle', 49.99, this)">Add to Cart</button>
+        </div>
+        
+        <div class="modal-product-card" data-flavor="berry-can">
+          <div class="modal-video-wrapper">
+            <video autoplay loop muted playsinline class="modal-video">
+              <source src="images/berry/can-video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Berry Bliss</h3>
+          <p class="modal-product-type">Can - $9.99</p>
+          <button class="modal-add-btn" onclick="addToCartFromModal('Berry Bliss', 'Can', 29.99, this)">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="epic-cart-layout">
+        <div class="cart-items-section">
+          <h3>Your Items</h3>
+          <div id="cartItems">
+            <div class="empty-cart-message">your cart is empty (add some drinks!)</div>
+          </div>
+        </div>
+        
+        <div class="cart-sidebar">
+          <h3>Order Summary</h3>
+          <div class="order-summary">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span>$<span id="cartSubtotal">0.00</span></span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span>FREE</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span>$<span id="cartTotal">0.00</span></span>
+            </div>
+          </div>
+          
+          <div class="email-signup">
+            <label for="promoEmail">Get exclusive deals</label>
+            <input type="email" id="promoEmail" placeholder="your@email.com" />
+          </div>
+          
+          <button class="checkout-btn" onclick="handleCheckout()">Place Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <img src="images/mcfresh-logo.png" alt="McFresh" class="footer-logo" />
+        <p class="footer-tagline">We make Drinks! Good ones.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@mcfresh.com">contact@mcfresh.co.nz</a></li>
+          <li><a href="tel:+1234567890">0800 666 2341</a></li>
+          <li>In your Fridge soon!</li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul class="footer-links">
+          <li><a href="#" target="_blank">Instagram</a></li>
+          <li><a href="#" target="_blank">Facebook</a></li>
+          <li><a href="#" target="_blank">Twitter</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Shipping Info</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 McFresh. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
